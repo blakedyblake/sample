@@ -32,9 +32,9 @@ app.get('/ProductData', (req, res)=>{
               dress["MainImageLink"] = 'https://ms-cdn2.maggiesottero.com/' + dress?.Images[0].PictureId + '/' + dress?.Images[0].FileName || 'n/a'
             }
   
-            let allDresses = JSON.stringify([...maggie, ...midgely, ...becca])
+            let allDresses = [...maggie, ...midgely, ...becca]
   
-            res.status(200).send(allDresses)
+            res.status(200).json(allDresses)
             console.log("Sent!")
   
           }).catch(e=>{console.error("Becca Server Error") })
