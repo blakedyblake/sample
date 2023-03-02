@@ -42,7 +42,9 @@ app.get('/ProductData', (req, res)=>{
       }).catch(e=>{console.error("Midgely Server Error")})
 })
 
-const port = 5000;
-app.listen(process.env.PORT || port, function() {
-  console.log("Listening on " + port);
-});
+// const port = 5000;
+// app.listen(process.env.PORT || port, function() {
+//   console.log("Listening on " + port);
+// });
+
+module.exports = app
